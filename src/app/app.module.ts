@@ -7,8 +7,8 @@ import { MovimentacaoListComponent } from './components/movimentacao-list/movime
 import { MovimentacaoNewComponent } from './components/movimentacao-new/movimentacao-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';

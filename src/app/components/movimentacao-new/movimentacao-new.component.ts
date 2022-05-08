@@ -1,3 +1,5 @@
+// compoenents/movimentacao-new.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { CorrentistaService } from 'src/app/services/correntista.service';
 import { MovimentacaoService } from 'src/app/services/movimentacao.service';
@@ -10,10 +12,13 @@ import { MovimentacaoService } from 'src/app/services/movimentacao.service';
 export class MovimentacaoNewComponent implements OnInit {
   correntistas:any;
   correntista:any;
+
   dataHora:any;
   descricao:any;
   valor:any;
   tipo:any;
+
+
 
   constructor(
     private movimentacaoService: MovimentacaoService,
@@ -23,7 +28,6 @@ export class MovimentacaoNewComponent implements OnInit {
   ngOnInit(): void {
     this.exibirCorrentistas();
   }
-
   exibirCorrentistas(): void {
     this.correntistaService.list()
       .subscribe(
@@ -35,7 +39,6 @@ export class MovimentacaoNewComponent implements OnInit {
           console.log(error);
         });
   }
-
   save(): void {
     console.log(this.correntista)
     const movimentacao = {
@@ -56,4 +59,5 @@ export class MovimentacaoNewComponent implements OnInit {
           console.log(error);
         });
   }
+
 }

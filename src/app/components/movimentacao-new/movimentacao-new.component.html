@@ -24,8 +24,8 @@
     <div class="col-12">
       <label for="iDescricao" class="form-label">Descrição</label>
       <input
-        [(ngModel)]="descricao"
         type="text"
+        [(ngModel)]="descricao"
         class="form-control"
         id="iDescricao"
         placeholder="Informe uma descrição"
@@ -33,7 +33,7 @@
     </div>
     <div class="col-md-3">
       <label for="iTipo" class="form-label">Tipo Movimentação</label>
-      <select id="iTipo" [(ngModel)]="tipo" class="form-select">
+      <select id="iTipo" class="form-select" [(ngModel)]="tipo">
         <option selected>RECEITA</option>
         <option>DESPESA</option>
       </select>
@@ -41,8 +41,8 @@
     <div class="col-md-2">
       <label for="iValor" class="form-label">R$ Valor</label>
       <input
-        [(ngModel)]="valor"
         type="text"
+        [(ngModel)]="valor"
         currencyMask
         [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
         class="form-control"

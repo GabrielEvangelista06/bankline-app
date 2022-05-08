@@ -7,8 +7,6 @@ import { MovimentacaoService } from 'src/app/services/movimentacao.service';
   templateUrl: './movimentacao-list.component.html',
   styleUrls: ['./movimentacao-list.component.css']
 })
-
-
 export class MovimentacaoListComponent implements OnInit {
   movimentacoes:any;
   correntistas:any;
@@ -16,13 +14,12 @@ export class MovimentacaoListComponent implements OnInit {
 
   constructor(
     private movimentacaoService: MovimentacaoService,
-    private correntistaService: CorrentistaService
+    private correntistaService: CorrentistaService,
     ) { }
 
   ngOnInit(): void {
     this.exibirCorrentistas();
   }
-
   exibirCorrentistas(): void {
     this.correntistaService.list()
       .subscribe(
@@ -34,7 +31,6 @@ export class MovimentacaoListComponent implements OnInit {
           console.log(error);
         });
   }
-
   listMovimentacoes(): void {
     this.movimentacaoService.findByIdConta(this.correntista.id)
       .subscribe(
